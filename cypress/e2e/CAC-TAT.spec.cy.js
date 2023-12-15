@@ -13,6 +13,7 @@ describe('Central de Atendimento ao Cliente TAT', function() {
     const longText = 'dasda, sdja, isjdiasjdiajidjasidjai'
     cy.get('#open-text-area').type(longText, { delay: 0 }) // diminui o delay de escrita de um texto long
     cy.get('#open-text-area').should('have.value', longText)
+    .and('be.visible')
   })
 
   it('marca os tipos de atendimento', function() {
